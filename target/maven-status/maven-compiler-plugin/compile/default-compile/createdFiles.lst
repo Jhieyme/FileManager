@@ -1,0 +1,13 @@
+com\jhieyme\fileManagerApi\model\File.class
+com\jhieyme\fileManagerApi\controller\FileController.class
+com\jhieyme\fileManagerApi\constans\MessageConst.class
+com\jhieyme\fileManagerApi\exceptions\FileExceptionHandler.class
+com\jhieyme\fileManagerApi\utils\ResponseFile$ResponseFileBuilder.class
+com\jhieyme\fileManagerApi\FileManagerApiApplication$Myconfiguration$1.class
+com\jhieyme\fileManagerApi\model\File$FileBuilder.class
+com\jhieyme\fileManagerApi\service\FileServiceImpl.class
+com\jhieyme\fileManagerApi\utils\ResponseFile.class
+com\jhieyme\fileManagerApi\FileManagerApiApplication$Myconfiguration.class
+com\jhieyme\fileManagerApi\repository\FileRepository.class
+com\jhieyme\fileManagerApi\service\FileService.class
+com\jhieyme\fileManagerApi\FileManagerApiApplication.class
