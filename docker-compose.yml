@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  filemanagerapi:
+    build: .
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: jdbc:mysql://file_manager:3306/db_fileManager?createDatabaseIfNotExist=true&serverTimezone=UTC
+      DB_USER: root
+      DB_PASSWORD: 123456789
+    restart: always
+    depends_on:
+      file_manager:
+          condition: service_healthy
+  file_manager:
+    image: mysql:8.3.0
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456789
+      MYSQL_PASSWORD: 123456789
+      MYSQL_DATABASE: db_fileManager
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 10
