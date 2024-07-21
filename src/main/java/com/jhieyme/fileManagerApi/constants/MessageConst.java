@@ -10,5 +10,5 @@ public class MessageConst {
 
     public static final String MESSAGE_DELETE_BAD = "Could not delete, please try again.";
 
-    public static final String MESSAGE_FILE_NOT_FOUND = "File not found!";
+    public static final String MESSAGE_FILE_NOT_FOUND = "!File not found!";
 }
