@@ -1,4 +1,4 @@
-package com.jhieyme.fileManagerApi.constans;
+package com.jhieyme.fileManagerApi.constants;
 
 public class MessageConst {
 

@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
-import static com.jhieyme.fileManagerApi.constans.MessageConst.*;
+import static com.jhieyme.fileManagerApi.constants.MessageConst.*;
 
 @RequiredArgsConstructor
 @RestController
