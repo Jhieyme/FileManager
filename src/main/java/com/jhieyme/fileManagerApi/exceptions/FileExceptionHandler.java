@@ -9,14 +9,14 @@ import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import static com.jhieyme.fileManagerApi.constants.MessageConst.MESSAGE_FILE_NOT_FOUND;
+import static com.jhieyme.fileManagerApi.constants.MessageConst.*;
 
 @ControllerAdvice
 public class FileExceptionHandler {
 
     @ExceptionHandler(MaxUploadSizeExceededException.class)
     public ResponseEntity<Object> maxSizeException(MaxUploadSizeExceededException exception) {
-        return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body("Excedió el tamaño de 50MB permitidos");
+        return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(MESSAGE_EXCEEDS_SIZE );
     }
 
     @ExceptionHandler(FileNotFoundException.class)
@@ -26,7 +26,7 @@ public class FileExceptionHandler {
 
     @ExceptionHandler(IOException.class)
     public ResponseEntity<Object> ioException(IOException exception) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Ocurrió un error al procesar el archivo");
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(MESSAGE_FILE_PROCESS_ERROR);
     }
 
 }
